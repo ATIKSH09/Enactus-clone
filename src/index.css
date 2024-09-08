@@ -4,6 +4,8 @@
 
 body {
   color: white;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 
@@ -91,5 +93,5 @@ body {
     background-attachment: local;
   }
 
-  
+
 }
