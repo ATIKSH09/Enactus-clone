@@ -4,7 +4,7 @@ import Main from "./Events/Main";
 
 function Events() {
   return (
-    <div>
+    <div className="bg-black">
       <Realnavbar bg="#272833" />
       <Main />
     </div>

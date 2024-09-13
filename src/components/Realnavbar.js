@@ -23,7 +23,7 @@ function Realnavbar(props) {
   };
 
   return (
-    <div className=" relative " style={{ background: `${props.bg}` }}>
+    <div className=" relative px-6 sm:px-0 " style={{ background: `${props.bg}` }}>
       <div
         id="side"
         className="hidden side translate-x-[-100%] duration-700 font-extralight pt-3 bg-[#131419] fixed left-0 w-[60vw] h-[100vh] sm:block z-[10]"

@@ -1,11 +1,13 @@
 import React from 'react'
 import Realnavbar from "./Realnavbar";
+import Main from './Contacts/Main';
 
 function Contact() {
   return (
-    <div className='bg-black'>
+    <div className='bg-[#272833]'>
       <Realnavbar bg="#272833" />
-      Contact</div>
+      <Main/>
+      </div>
   )
 }
 
