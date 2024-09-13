@@ -155,7 +155,7 @@ function Main() {
                 />
               </a>
               <a
-                className=""
+                className=""z
                 target="_blank"
                 href="https://www.instagram.com/i.atiksh/"
               >

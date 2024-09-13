@@ -69,6 +69,30 @@ body {
   }
 }
 
+
+
+/* flipping animation starts */
+.realcard{
+  transform-style: preserve-3d;
+  transition: all 0.25s ease;
+}
+
+.realcard:hover{
+  transform: rotateX(180deg);
+}
+
+.front{
+  backface-visibility: hidden;
+}
+
+.back{
+  backface-visibility: hidden;
+  transform: rotateX(180deg); 
+}
+/* flipping animation ends */
+
+
+
 @media (max-width: 639px) {
   #main1 {
     background: url(https://enactusbitshyd.in/images/home21.png);

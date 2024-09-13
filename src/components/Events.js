@@ -1,13 +1,14 @@
-import React from 'react'
+import React from "react";
 import Realnavbar from "./Realnavbar";
-
+import Main from "./Events/Main";
 
 function Events() {
   return (
-    <div className='bg-black'>
+    <div>
       <Realnavbar bg="#272833" />
-      Events</div>
-  )
+      <Main />
+    </div>
+  );
 }
 
-export default Events
+export default Events;

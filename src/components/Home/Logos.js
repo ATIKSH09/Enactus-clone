@@ -8,7 +8,7 @@ function Logos() {
       <div
         id="2nd"
         data-aos="fade-right"
-        className="bg-[#272833] mt-[1px] py-32 gap-8 flex flex-col justify-center items-center"
+        className="bg-[#272833] py-32 gap-8 flex flex-col justify-center items-center"
       >
         <div className="flex gap-8">
           <a
@@ -31,7 +31,7 @@ function Logos() {
           </h1>
         </div>
       </div>
-      <div className="bg-[#272833] flex justify-center items-center mt-[0.5px]">
+      <div className="bg-[#272833] flex justify-center items-center ">
         Created By Atiksh Gupta
       </div>
     </div>
