@@ -1,1 +1,1 @@
-Hosted website link --> https://enactus-nu.vercel.app/Contact
+Hosted website link --> https://enactus-nu.vercel.app
