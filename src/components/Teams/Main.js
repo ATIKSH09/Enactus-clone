@@ -1,330 +1,152 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import linkedin from "../../assets/imgs/linkedin.png";
 import instagram from "../../assets/imgs/instagram.png";
 import github from "../../assets/imgs/github.png";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Logos from "../Home/Logos";
+import AkshathImg from "../eventimages/TeamImages/IMG-20240714-WA0021.jpg";
+import AdamyaImg from "../eventimages/TeamImages/IMG-20240714-WA0023.jpg";
+import NakulImg from "../eventimages/TeamImages/IMG-20240714-WA0022.jpg";
+import AvaneeshImg from "../eventimages/TeamImages/IMG-20240714-WA0025.jpg";
+import HarshImg from "../eventimages/TeamImages/IMG-20240714-WA0024.jpg";
 
 function Main() {
-  useEffect(() => {
-    var logodiv1 = document.querySelector("#logodiv1");
-    var logodiv2 = document.querySelector("#logodiv2");
-    var logodiv3 = document.querySelector("#logodiv3");
-    var logodiv4 = document.querySelector("#logodiv4");
-    var logodiv5 = document.querySelector("#logodiv5");
-    var logodiv6 = document.querySelector("#logodiv6");
-    var logodiv7 = document.querySelector("#logodiv7");
-    var logodiv8 = document.querySelector("#logodiv8");
-    var logoimg1 = document.querySelectorAll(".logoimg1");
-    var logoimg2 = document.querySelectorAll(".logoimg2");
-    var logoimg3 = document.querySelectorAll(".logoimg3");
-    var logoimg4 = document.querySelectorAll(".logoimg4");
-    var logoimg5 = document.querySelectorAll(".logoimg5");
-    var logoimg6 = document.querySelectorAll(".logoimg6");
-    var logoimg7 = document.querySelectorAll(".logoimg7");
-    var logoimg8 = document.querySelectorAll(".logoimg8");
+  const [currentGroup, setCurrentGroup] = useState(0);
+  const teamMembers = [
+    {
+      name: "Akshat Agarwal",
+      position: "President",
+      imageUrl: AkshathImg,
+      linkedin: "https://www.linkedin.com/in/atiksh-gupta-5a95a623b/",
+      instagram: "https://www.instagram.com/i.atiksh/",
+      github: "https://github.com/ATIKSH09",
+    },
+    {
+      name: "Adamya Tripathi",
+      position: "Vice President",
+      imageUrl: AdamyaImg,
+      linkedin: "https://www.linkedin.com/in/atiksh-gupta-5a95a623b/",
+      instagram: "https://www.instagram.com/i.atiksh/",
+      github: "https://github.com/ATIKSH09",
+    },
+    {
+      name: "Silla Nakul",
+      position: "Secretary",
+      imageUrl: NakulImg,
+      linkedin: "https://www.linkedin.com/in/atiksh-gupta-5a95a623b/",
+      instagram: "https://www.instagram.com/i.atiksh/",
+      github: "https://github.com/ATIKSH09",
+    },
+    {
+      name: "Avaneesh Pothuri",
+      position: "Technical Head",
+      imageUrl: AvaneeshImg,
+      linkedin: "https://www.linkedin.com/in/atiksh-gupta-5a95a623b/",
+      instagram: "https://www.instagram.com/i.atiksh/",
+      github: "https://github.com/ATIKSH09",
+    },
+    {
+      name: "Harsh Srivastava",
+      position: "Outreach",
+      imageUrl: HarshImg,  // Update with Harsh's actual image URL
+      linkedin: "https://www.linkedin.com/in/harsh-srivastava/",
+      instagram: "https://www.instagram.com/harsh_srivastava/",
+      github: "https://github.com/harsh-srivastava",
+    }
 
-    logodiv1.addEventListener("mouseover", () => {
-      for (let i = 0; i < logoimg1.length; i++) {
-        logoimg1[i].style.display = "block";
-      }
-    });
-    logodiv1.addEventListener("mouseout", () => {
-      for (let i = 0; i < logoimg1.length; i++) {
-        logoimg1[i].style.display = "none";
-      }
-    });
+  ];
+  const itemsPerGroup = 4;
+  const totalGroups = Math.ceil(teamMembers.length / itemsPerGroup);
 
-    logodiv2.addEventListener("mouseover", () => {
-      for (let i = 0; i < logoimg1.length; i++) {
-        logoimg2[i].style.display = "block";
-      }
-    });
-    logodiv2.addEventListener("mouseout", () => {
-      for (let i = 0; i < logoimg1.length; i++) {
-        logoimg2[i].style.display = "none";
-      }
-    });
+  const groups = [
+    teamMembers.slice(0, 4), // First group: items 1-4
+    teamMembers.slice(1, 5)     // Second group: items from the 5th onwards
+  ];
 
-    logodiv3.addEventListener("mouseover", () => {
-      for (let i = 0; i < logoimg1.length; i++) {
-        logoimg3[i].style.display = "block";
-      }
-    });
-    logodiv3.addEventListener("mouseout", () => {
-      for (let i = 0; i < logoimg1.length; i++) {
-        logoimg3[i].style.display = "none";
-      }
-    });
+  const handleNext = () => {
+    if (currentGroup < totalGroups - 1) {
+      setCurrentGroup(currentGroup + 1);
+    }
+  };
 
-    logodiv4.addEventListener("mouseover", () => {
-      for (let i = 0; i < logoimg1.length; i++) {
-        logoimg4[i].style.display = "block";
-      }
-    });
-    logodiv4.addEventListener("mouseout", () => {
-      for (let i = 0; i < logoimg1.length; i++) {
-        logoimg4[i].style.display = "none";
-      }
-    });
-
-    logodiv5.addEventListener("mouseover", () => {
-      for (let i = 0; i < logoimg1.length; i++) {
-        logoimg5[i].style.display = "block";
-      }
-    });
-    logodiv5.addEventListener("mouseout", () => {
-      for (let i = 0; i < logoimg1.length; i++) {
-        logoimg5[i].style.display = "none";
-      }
-    });
-
-    logodiv6.addEventListener("mouseover", () => {
-      for (let i = 0; i < logoimg1.length; i++) {
-        logoimg6[i].style.display = "block";
-      }
-    });
-    logodiv6.addEventListener("mouseout", () => {
-      for (let i = 0; i < logoimg1.length; i++) {
-        logoimg6[i].style.display = "none";
-      }
-    });
-
-    logodiv7.addEventListener("mouseover", () => {
-      for (let i = 0; i < logoimg1.length; i++) {
-        logoimg7[i].style.display = "block";
-      }
-    });
-    logodiv7.addEventListener("mouseout", () => {
-      for (let i = 0; i < logoimg1.length; i++) {
-        logoimg7[i].style.display = "none";
-      }
-    });
-
-    logodiv8.addEventListener("mouseover", () => {
-      for (let i = 0; i < logoimg1.length; i++) {
-        logoimg8[i].style.display = "block";
-      }
-    });
-    logodiv8.addEventListener("mouseout", () => {
-      for (let i = 0; i < logoimg1.length; i++) {
-        logoimg8[i].style.display = "none";
-      }
-    });
-  }, []);
+  const handlePrevious = () => {
+    if (currentGroup > 0) {
+      setCurrentGroup(currentGroup - 1);
+    }
+  };
 
   return (
     <div className="bg-[#272833] pb-4">
       <div className="flex gap-16 pb-12 flex-col justify-center items-center bg-[#272833]">
-        <div
-          id="teams"
-          className="text-[40px] border-[#FFC223] border-b-4 px-20 py-6"
-        >
+        <div id="teams" className="text-[40px] border-[#FFC223] border-b-4 px-20 py-6">
           Our Team
         </div>
+        <div className="relative w-full flex justify-center items-center">
+          <button onClick={handlePrevious} className="absolute left-0">
+            <FaArrowLeft className="text-[#FFC223] text-3xl" />
+          </button>
 
-        <div
-          id="execute"
-          className=" flex  justify-center lg:gap-12 items-center w-full flex-col gap-4"
-        >
-          <h1 className="text-3xl">Executive Body</h1>
-          <div className="flex sm:flex-col sm:gap-12 lg:flex-wrap lg:gap-8 justify-center items-center w-full  gap-4">
-            {/* 1 starts */}
-            <div
-              id="logodiv1"
-              className="w-80 logodiv relative rounded-t-3xl duration-700 bg-black hover:text-black hover:bg-[#FFC223] overflow-hidden  rounded-b-[6rem]"
-            >
-              <img
-                src="https://enactusbitshyd.in/images/IMG-20240714-WA0021.jpg"
-                alt=""
-                className="rounded-t-3xl"
-              />
-              <div className="flex flex-col py-4 justify-center items-center w-full  gap-2 ">
-                <h1 className="text-xl font-semibold ">Akshat Agarwal</h1>
-                <h1 className="text-base text-[#FFC223]">President</h1>
-              </div>
-
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/in/atiksh-gupta-5a95a623b/"
-              >
-                <img
-                  className="w-12 hidden duration-700 logoimg1 bg-black p-3 rounded-xl right-[15%] bottom-[20%] absolute "
-                  src={linkedin}
-                  alt=""
-                />
-              </a>
-              <a
-                className=""z
-                target="_blank"
-                href="https://www.instagram.com/i.atiksh/"
-              >
-                <img
-                  className="w-12 duration-700 hidden logoimg1 bg-black p-3 rounded-xl  right-1/2 translate-x-[50%]
-                %] absolute bottom-[12%]  "
-                  src={instagram}
-                  alt=""
-                />
-              </a>
-              <a target="_blank" href="https://github.com/ATIKSH09">
-                <img
-                  className="w-12 duration-700 logoimg1 hidden bg-black p-3 rounded-xl absolute left-[15%] bottom-[20%] "
-                  src={github}
-                  alt=""
-                />
-              </a>
-            </div>
-
-            {/* 2 starts */}
-            <div
-              id="logodiv2"
-              className="w-80 logodiv relative rounded-t-3xl duration-700 bg-black hover:text-black hover:bg-[#FFC223] overflow-hidden  rounded-b-[6rem]"
-            >
-              <img
-                src="https://enactusbitshyd.in/images/IMG-20240714-WA0023.jpg"
-                alt=""
-                className="rounded-t-3xl"
-              />
-              <div className="flex flex-col py-4 justify-center items-center w-full  gap-2 ">
-                <h1 className="text-xl font-semibold ">Adamya Tripathi</h1>
-                <h1 className="text-base text-[#FFC223]">Vice President</h1>
-              </div>
-
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/in/atiksh-gupta-5a95a623b/"
-              >
-                <img
-                  className="w-12 hidden duration-700 logoimg2 bg-black p-3 rounded-xl right-[15%] bottom-[20%] absolute "
-                  src={linkedin}
-                  alt=""
-                />
-              </a>
-              <a
-                className=""
-                target="_blank"
-                href="https://www.instagram.com/i.atiksh/"
-              >
-                <img
-                  className="w-12 duration-700 hidden logoimg2 bg-black p-3 rounded-xl  right-1/2 translate-x-[50%]
-                %] absolute bottom-[12%]  "
-                  src={instagram}
-                  alt=""
-                />
-              </a>
-              <a target="_blank" href="https://github.com/ATIKSH09">
-                <img
-                  className="w-12 duration-700 logoimg2 hidden bg-black p-3 rounded-xl absolute left-[15%] bottom-[20%] "
-                  src={github}
-                  alt=""
-                />
-              </a>
-            </div>
-
-            {/* 3 starts */}
-            <div
-              id="logodiv3"
-              className="w-80 logodiv relative rounded-t-3xl duration-700 bg-black hover:text-black hover:bg-[#FFC223] overflow-hidden  rounded-b-[6rem]"
-            >
-              <img
-                src="https://enactusbitshyd.in/images/IMG-20240714-WA0022.jpg"
-                alt=""
-                className="rounded-t-3xl"
-              />
-              <div className="flex flex-col py-4 justify-center items-center w-full  gap-2 ">
-                <h1 className="text-xl font-semibold ">Silla Nakul</h1>
-                <h1 className="text-base text-[#FFC223]">Secretary</h1>
-              </div>
-
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/in/atiksh-gupta-5a95a623b/"
-              >
-                <img
-                  className="w-12 hidden duration-700 logoimg3 bg-black p-3 rounded-xl right-[15%] bottom-[20%] absolute "
-                  src={linkedin}
-                  alt=""
-                />
-              </a>
-              <a
-                className=""
-                target="_blank"
-                href="https://www.instagram.com/i.atiksh/"
-              >
-                <img
-                  className="w-12 duration-700 hidden logoimg3 bg-black p-3 rounded-xl  right-1/2 translate-x-[50%]
-                %] absolute bottom-[12%]  "
-                  src={instagram}
-                  alt=""
-                />
-              </a>
-              <a target="_blank" href="https://github.com/ATIKSH09">
-                <img
-                  className="w-12 duration-700 logoimg3 hidden bg-black p-3 rounded-xl absolute left-[15%] bottom-[20%] "
-                  src={github}
-                  alt=""
-                />
-              </a>
-            </div>
-
-            {/* 4 starts */}
-            <div
-              id="logodiv4"
-              className="w-80 logodiv relative rounded-t-3xl duration-700 bg-black hover:text-black hover:bg-[#FFC223] overflow-hidden  rounded-b-[6rem]"
-            >
-              <img
-                src="https://enactusbitshyd.in/images/IMG-20240714-WA0025.jpg"
-                alt=""
-                className="rounded-t-3xl"
-              />
-              <div className="flex flex-col py-4 justify-center items-center w-full  gap-2 ">
-                <h1 className="text-xl font-semibold ">Avaneesh Pothuri</h1>
-                <h1 className="text-base text-[#FFC223]">Technical Head</h1>
-              </div>
-
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/in/atiksh-gupta-5a95a623b/"
-              >
-                <img
-                  className="w-12 hidden duration-700 logoimg4 bg-black p-3 rounded-xl right-[15%] bottom-[20%] absolute "
-                  src={linkedin}
-                  alt=""
-                />
-              </a>
-              <a
-                className=""
-                target="_blank"
-                href="https://www.instagram.com/i.atiksh/"
-              >
-                <img
-                  className="w-12 duration-700 hidden logoimg4 bg-black p-3 rounded-xl  right-1/2 translate-x-[50%]
-                %] absolute bottom-[12%]  "
-                  src={instagram}
-                  alt=""
-                />
-              </a>
-              <a target="_blank" href="https://github.com/ATIKSH09">
-                <img
-                  className="w-12 duration-700 logoimg4 hidden bg-black p-3 rounded-xl absolute left-[15%] bottom-[20%] "
-                  src={github}
-                  alt=""
-                />
-              </a>
+          <div id="execute" className="flex justify-center lg:gap-12 items-center w-full flex-col gap-4">
+            <h1 className="text-3xl">Executive Body</h1>
+            <div className="flex sm:flex-col sm:gap-12 lg:flex-wrap lg:gap-8 justify-center items-center w-full gap-4">
+              {groups[currentGroup].map((member, index) => (
+                <div
+                  key={index}
+                  className="w-80 logodiv relative rounded-t-3xl duration-700 bg-black hover:text-black hover:bg-[#FFC223] overflow-hidden rounded-b-[6rem]"
+                  onMouseEnter={(e) => {
+                    e.currentTarget.querySelectorAll(".logoimg").forEach((img) => {
+                      img.style.display = "block";
+                    });
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.querySelectorAll(".logoimg").forEach((img) => {
+                      img.style.display = "none";
+                    });
+                  }}
+                >
+                  <img src={member.imageUrl} alt={member.name} className="rounded-t-3xl" />
+                  <div className="flex flex-col py-4 justify-center items-center w-full gap-2">
+                    <h1 className="text-xl font-semibold ">{member.name}</h1>
+                    <h1 className="text-base text-[#FFC223]">{member.position}</h1>
+                  </div>
+                  <div className="flex justify-center gap-4 absolute bottom-[20%] w-full">
+                    <a target="_blank" href={member.linkedin}>
+                      <img
+                        className="w-12 hidden duration-700 logoimg bg-black p-3 rounded-xl"
+                        src={linkedin}
+                        alt="LinkedIn"
+                      />
+                    </a>
+                    <a target="_blank" href={member.instagram}>
+                      <img
+                        className="w-12 hidden duration-700 logoimg bg-black p-3 rounded-xl"
+                        src={instagram}
+                        alt="Instagram"
+                      />
+                    </a>
+                    <a target="_blank" href={member.github}>
+                      <img
+                        className="w-12 hidden duration-700 logoimg bg-black p-3 rounded-xl"
+                        src={github}
+                        alt="GitHub"
+                      />
+                    </a>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
+
+          <button onClick={handleNext} className="absolute right-4 z-10">
+            <FaArrowRight className="text-[#FFC223] text-3xl" />
+          </button>
         </div>
 
-        {/* previous starts */}
-
-        <div
-          id="previous"
-          className=" flex  justify-center items-center w-full lg:gap-12 flex-col gap-4"
-        >
+        {/* Previous Members Section */}
+        <div id="previous" className="flex justify-center items-center w-full lg:gap-12 flex-col gap-4">
           <h1 className="text-3xl">Previous Members</h1>
-          <div className="flex sm:flex-col sm:gap-12 lg:flex-wrap lg:gap-8 justify-center items-center w-full  gap-4">
-            {/* 1 starts */}
-            <div
+          <div className="flex sm:flex-col sm:gap-12 lg:flex-wrap lg:gap-8 justify-center items-center w-full gap-4">
+          <div
               id="logodiv5"
               className="w-80 logodiv relative rounded-t-3xl duration-700 bg-black hover:text-black hover:bg-[#FFC223] overflow-hidden  rounded-b-[6rem]"
             >
@@ -510,14 +332,15 @@ function Main() {
                 />
               </a>
             </div>
+            
           </div>
         </div>
       </div>
 
-        <Logos />
-      
+      <Logos />
     </div>
   );
 }
 
 export default Main;
+
