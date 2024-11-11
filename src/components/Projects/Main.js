@@ -1,6 +1,10 @@
 import React from "react";
 import Impcard from "../Impcard";
 import Logos from "../Home/Logos";
+import img1 from "../eventimages/IconImages/Medha.png";
+import img2 from "../eventimages/IconImages/Oorja.png";
+import img3 from "../eventimages/IconImages/Tejas.png";
+import img4 from "../eventimages/IconImages/Vikalp.png";
 
 function Main() {
   return (
@@ -13,31 +17,31 @@ function Main() {
         </div>
         <div className="flex gap-4 flex-wrap justify-center items-center">
           <Impcard
-            img="https://enactusbitshyd.in/eventimages/projectimages/Medha.png"
-            title=""
+            img={img1}
             desc="A platform for collaborating NGOs with corporates and enthusiasts"
             backtitle="Project Medha"
+            route = "/Medha"
           />
 
           <Impcard
-            img="https://enactusbitshyd.in/eventimages/projectimages/Oorja.png"
-            title=""
+            img={img2}
             desc="Producing energy from organic waste"
             backtitle="Project Oorja"
+            route = "/Oorja"
           />
 
           <Impcard
-            img="https://enactusbitshyd.in/eventimages/projectimages/Tejas.png"
-            title=""
+            img={img3}
             desc="A sustainable initiative to tackle the dual problem of environment pollution and agricultural waste management"
             backtitle="Project Tejas"
+            route = "/Tejas"
           />
 
           <Impcard
-            img="https://enactusbitshyd.in/eventimages/projectimages/Vikalp.png"
-            title=""
+            img={img4}
             desc="Opportunity for All"
             backtitle="Project Vikalp"
+            route = "/Vikalp"
           />
         </div>
       </div>

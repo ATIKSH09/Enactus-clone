@@ -1,7 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function Impcard({title, img, desc, backtitle}) {
+function Impcard({title, img, desc, backtitle, route}) {
   return (
+    <div>
+    <Link to = {route}>
     <div className="w-96 thecard  h-60  border-1 border-white overflow-hidden relative rounded-2xl cursor-pointer">
       <div className="realcard absolute top-0 left-0">
         <div className="front">
@@ -28,6 +31,8 @@ function Impcard({title, img, desc, backtitle}) {
           </p>
         </div>
       </div>
+    </div>
+    </Link>
     </div>
   );
 }
