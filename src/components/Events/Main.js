@@ -18,6 +18,7 @@ function Main() {
             desc="Enlightening talk on Technology, Passion, and Compassion by Akshaya
           Patra Regional President Sri Satya Gaur Chandra Dasa"
             backtitle="Akshaya Patra Talk during ATMOS"
+            route = "/AtmosTalk"
           />
 
           <Impcard
@@ -25,6 +26,7 @@ function Main() {
             title="DAAN UTSAV"
             desc="Annual National Level Donation Drive having more than 20000 volunteers."
             backtitle="Daan Utsav"
+            route = "/DaanUtsav"
           />
 
           <Impcard
@@ -32,6 +34,7 @@ function Main() {
             title="IMPACTUS"
             desc="National Level Case Study Competition with more than 1500 participants"
             backtitle="Impactus"
+            route = "/Impactus"
           />
 
           <Impcard
@@ -39,6 +42,7 @@ function Main() {
             title="NGO VISIT"
             desc="Visit to Sri Vidhya Foundation Centre for Underprivileged children to gain insight on the daily challenges faced by caregivers."
             backtitle="NGO Visit"
+            route = "/NGOVisit"
           />
         </div>
       </div>

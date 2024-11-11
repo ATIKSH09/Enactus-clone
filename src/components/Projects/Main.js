@@ -17,6 +17,7 @@ function Main() {
             title=""
             desc="A platform for collaborating NGOs with corporates and enthusiasts"
             backtitle="Project Medha"
+            route = "/Medha"
           />
 
           <Impcard
@@ -24,6 +25,7 @@ function Main() {
             title=""
             desc="Producing energy from organic waste"
             backtitle="Project Oorja"
+            route = "/Oorja"
           />
 
           <Impcard
@@ -31,6 +33,7 @@ function Main() {
             title=""
             desc="A sustainable initiative to tackle the dual problem of environment pollution and agricultural waste management"
             backtitle="Project Tejas"
+            route = "/Tejas"
           />
 
           <Impcard
@@ -38,6 +41,7 @@ function Main() {
             title=""
             desc="Opportunity for All"
             backtitle="Project Vikalp"
+            route = "/Vikalp"
           />
         </div>
       </div>
